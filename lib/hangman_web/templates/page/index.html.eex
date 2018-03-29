@@ -1,0 +1,36 @@
+<!--div class="row">
+  <div class="col">
+    <h1 id="index-page">Join a Game</h1>
+    <p><a href="/game/demo">Join</a></p>
+  </div>
+</div-->
+
+<div class="jumbotron" id="index-jumbo">
+  <h2><%= gettext "Welcome to %{name}!", name: "Connect 4 EXTREME (Math Edition)" %></h2>
+  <p class="lead">Please enter a game name to join.</p>
+
+  <div class="form-group">
+    <label for="game-name">Game Name:</label>
+    <input type="text" class="form-control" id="game-input">
+    <label for="user-name">Enter Username:</label>
+    <input type="text" class="form-control" id="username-input">
+
+  </div>
+
+  <a href="#" id="joinId">
+    <button type="button" class="btn btn-primary btn-block" onclick="joinGame()" id="game-button">Enter</button>
+  </a>
+
+</div>
+
+<script>
+  function joinGame(){
+    var gameName = document.getElementById("game-input").value;
+    var userName = document.getElementById("username-input").value;
+    if (gameName == "" || userName == ""){
+      return
+    }
+    var a = document.getElementById("joinId");
+    a.href = "/game/" + gameName + "/user/" + userName;
+  }
+</script>

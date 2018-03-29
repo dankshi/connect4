@@ -1,0 +1,17 @@
+<div >
+  <h1 class="display-4">Connect 4 EXTREME!</h1>
+  <p class="lead">Room #: <%= @game %></p>
+  <p class="lead">Entered as: <%= @user %></p>
+  <hr class="my-4">
+  <p></p>
+
+  <script>
+    window.gameName = "<%= @game %>";
+    window.userName = "<%= @user %>";
+  </script>
+</div>
+
+
+<div id="root">
+  <p>React app not loaded...</p>
+</div>

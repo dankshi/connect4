@@ -1,0 +1,116 @@
+/* This file is for your main application css. */
+
+@import "bootstrap";
+
+body { font-size: 20pt; }
+
+.container {
+  font-family:monospace;
+  font-size: 12px;
+  text-align: center;
+}
+
+.board-container{
+  background-color:ghostwhite;
+  margin:auto;
+  width:400px;
+  border-radius: .4em;
+  padding: 10px;
+  display:inline-block;
+}
+
+.roominfo-container{
+  background-color: ghostwhite;
+  border-radius: .3em;
+  display:inline-block;
+  max-height:350px;
+  overflow: hidden;
+  padding: 10px;
+  margin-left: 15px;
+}
+.roominfo-header{
+  display:inline-block;
+  font-weight: bold;
+}
+.roominfo-user{
+
+}
+.stop-go-container{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0px 0px 0px;
+  animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.go-text{
+  color:green;
+}
+
+.stop-text{
+  color:red;
+}
+.qa-container{
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: .3em;
+  width: 80%;
+}
+.question-body{
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.p1-label{
+  font-weight: bold;
+  color:red;
+}
+
+.p2-label{
+  font-weight: bold;
+}
+
+.grid-cell{
+    border:1px solid gray;
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    cursor:pointer;
+    border-radius: 2em;
+    margin: 2px;
+    background-color:white;
+}
+
+.grid-cell:hover{
+    background: ghostwhite;
+}
+.grid-row{
+    display:inline-block;
+}
+
+.p1-cell{
+    background-color:red;
+}
+.p1-cell:hover{
+  background-color: red;
+  cursor:not-allowed;
+}
+
+
+.p2-cell{
+    background-color:black;
+    -webkit-transition: background-color 500ms ease-out .05s;
+    -moz-transition: background-color 500ms ease-out .05s;
+    -o-transition: background-color 500ms ease-out .05s;
+    transition: background-color 500ms ease-out .05s;
+}
+.p2-cell:hover{
+  background-color: black;
+  cursor:not-allowed;
+}
